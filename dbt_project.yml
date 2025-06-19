@@ -1,0 +1,16 @@
+name: customer_pipeline
+version: '2.0'
+
+profile: default
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+
+models:
+  customer_pipeline:
+    bronze:
+      materialized: view
+    silver:
+      materialized: view
+    gold:
+      materialized: table
